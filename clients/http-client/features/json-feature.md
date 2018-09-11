@@ -54,3 +54,16 @@ val client = HttpClient(HttpClientEngine) {
 
 To use this feature, you need to include `io.ktor:ktor-client-jackson` artifact.
 {: .note.artifact }
+
+### Kotlinx.Serialization
+
+```kotlin
+val client = HttpClient(HttpClientEngine) {
+    install(JsonFeature) {
+        serializer = KotlinxSerializer()
+    }
+}
+```
+
+To use this feature, you need to include `io.ktor:ktor-client-jvm` artifact on the jvm.
+{: .note.artifact }
